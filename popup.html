@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dyslexia Reading Assistant</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      margin-bottom: 15px;
+    }
+    select, button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .icon {
+      font-size: 18px;
+    }
+    .color-picker {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h3>Font Settings</h3>
+    <select id="fontSelect">
+      <option value="Arial">Arial</option>
+      <option value="OpenDyslexic">OpenDyslexic</option>
+      <option value="Comic Sans MS">Comic Sans MS</option>
+      <option value="Verdana">Verdana</option>
+    </select>
+  </div>
+
+  <div class="section">
+    <h3>Reading Tools</h3>
+    <button id="toggleToolbar">
+      <span class="icon">🛠️</span>
+      Toggle Reading Toolbar
+    </button>
+  </div>
+
+  <div class="section">
+    <h3>Text to Speech</h3>
+    <button id="startReading">Start Reading</button>
+    <button id="stopReading">Stop Reading</button>
+  </div>
+
+  <div class="section">
+    <h3>Highlighter</h3>
+    <input type="color" id="highlightColor" class="color-picker" value="#ffeb3b">
+    <button id="toggleHighlighter">Toggle Highlighter</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

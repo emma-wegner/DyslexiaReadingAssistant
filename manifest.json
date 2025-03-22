@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Dyslexia Reading Assistant",
+  "version": "1.0",
+  "description": "A Chrome extension to help users with dyslexia by providing font changes, text-to-speech, and highlighting features",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tts"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/DysLexia16.png",
+      "48": "icons/DysLexia48.png",
+      "128": "icons/DysLexia.png"
+    }
+  },
+  "icons": {
+    "16": "icons/DysLexia16.png",
+    "48": "icons/DysLexia48.png",
+    "128": "icons/DysLexia.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+} 

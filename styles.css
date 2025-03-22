@@ -1,0 +1,105 @@
+/* Styles for highlighted text */
+.dyslexia-highlight {
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Ensure text remains readable when font is changed */
+body {
+  line-height: 1.5;
+  word-spacing: 0.16em;
+  letter-spacing: 0.12em;
+}
+
+/* Add some contrast to make text more readable */
+p, span, div {
+  color: #333;
+}
+
+/* Floating Toolbar Styles */
+.dyslexia-toolbar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10000;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.dyslexia-toolbar.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dyslexia-toolbar button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dyslexia-toolbar button:hover {
+  background: #45a049;
+}
+
+.dyslexia-toolbar .color-picker {
+  display: flex;
+  gap: 4px;
+}
+
+.dyslexia-toolbar .color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.dyslexia-toolbar .color-option.active {
+  border-color: #333;
+}
+
+.dyslexia-toolbar .drag-handle {
+  cursor: move;
+  padding: 4px;
+  margin-right: 8px;
+}
+
+/* Tooltip styles */
+.dyslexia-toolbar [data-tooltip] {
+  position: relative;
+}
+
+.dyslexia-toolbar [data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: #333;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.dyslexia-toolbar [data-tooltip]:hover:before {
+  opacity: 1;
+} 
